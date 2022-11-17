@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Luckiest+Guy&family=Urbanist:wght@100;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
+    text-align: center;
+    color: deeppink;
+    text-shadow: 2px 2px white;
+}
+
+.parent {
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "footer"
+    ;
+}
+
+.childA {
+    grid-area: header;
+    background-image: url("https://images.pexels.com/photos/8527215/pexels-photo-8527215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.childB {
+    grid-area: aside;
+    background-image: url("https://images.pexels.com/photos/9582084/pexels-photo-9582084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.childC {
+    grid-area: main;
+    background-image: url("https://images.pexels.com/photos/7034524/pexels-photo-7034524.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.childD {
+    grid-area: footer;
+    background-image: url("https://images.pexels.com/photos/8527207/pexels-photo-8527207.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: cadetblue;
+    display: grid;
+    place-items: center;
+}
+
+@media screen and (min-width: 768px) {
+    .parent {
+    grid-template-areas: 
+    "header header header header"
+    "aside aside main main"
+    "aside aside main main"
+    "footer footer footer footer"
+    ;
+    }
+}
